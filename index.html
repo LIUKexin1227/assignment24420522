@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- 引入Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lora&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#brand" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BRAND</a>
+    <a href="#travel" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TRAVEL</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Merchandise</a>
+        <a href="#" class="w3-bar-item w3-button">Extras</a>
+        <a href="#" class="w3-bar-item w3-button">Media</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  
+
+  <!-- Automatic Slideshow Images -->
+<div class="mySlides w3-display-container">
+  <img src="lalaland.jpg" class="widen-image">
+  <div class="text-overlay">
+      <h3 class="slide-title">Griffith Park - LA LA LAND</h3> 
+      <p class="slide-address"><b>Address: Mt Hollywood Dr, Los Angeles, CA 90027</b></p>
+  </div>
+</div>
+
+<div class="mySlides w3-display-container">
+  <img src="midnight in paris.jpg" class="shrink-image">
+  <div class="text-overlay">
+      <h3 class="slide-title">Seine River - Midnight in Paris</h3> 
+      <p class="slide-address"><b>Address: Bateaux Parisiens, Port de la Bourdonnais, 75007 Paris</b></p>
+  </div>
+</div>
+
+<div class="mySlides w3-display-container">
+  <img src="before sunrise.jpg" class="shrink-image">
+  <div class="text-overlay">
+      <h3 class="slide-title">Prater Park - Before Sunrise</h3>
+      <p class="slide-address"><b>Address: Prater 9 / Tiefstrasse, Ausstellungsstrasse, 1020 Vienna</b></p>
+  </div>
+</div>
+
+
+<!-- Script for Slideshow -->
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var slides = document.getElementsByClassName("mySlides");
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // 每2秒切换一次幻灯片
+  }
+</script>
+
+  <!-- 音乐播放器 -->
+  <div class="music-player">
+    <h3>Background Music</h3>
+    <audio id="audioPlayer" controls>
+      <source src="city of stars.mp3.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <!-- 幻灯片容器 -->
+  <div class="w3-content w3-display-container">
+    <!-- The Band Section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width: 800px; opacity: 0.7;" id="brand">
+      <h2 class="w3-wide">OUR STORY</h2>
+      <p class="w3-opacity"><i>Romantic Vistas</i></p>
+      <p class="w3-justify">How long has it been since you and your loved one last shared a sweet journey together? Imagine this: in the dazzling glow of a Los Angeles sunset, you and your partner dance beneath the Griffith Observatory, just like the protagonists in "La La Land". Or, take a ride on the ancient Riesenrad Ferris wheel in Prater Park, Vienna, overlooking the city's romantic skyline as you relive the tender moments of Jesse and Celine's serendipitous love story from "Before Sunrise". Picture yourselves strolling through the rain-kissed streets of Paris at midnight, tracing Gil's footsteps from "Midnight in Paris" as he embarks on a timeless quest for his soulmate.
+  
+      Romantic Vistas is dedicated to transforming these cinematic moments of romance into real-life travel memories. We strive to create a unique love journey that belongs solely to you and your partner. Join us on an adventure that awakens both heart and senses, where every step becomes an unforgettable memory etched into your story. Let us guide you to those dreamy destinations where love feels infinite, and every moment feels like a scene from your own romantic film.</p>
+
+    </div>
+  </div>
+
+  <!-- The Tour Section -->
+ <!-- 修改后的旅行部分 -->
+<div class="w3-black" id="travel">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:1200px">
+    <h2 class="w3-wide w3-center">TRAVEL BOOKING</h2>
+    <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br>
+    
+    <!-- 垂直排列容器 -->
+    <div class="w3-container">
+      
+      <!-- Los Angeles 卡片 -->
+      <div class="w3-card w3-white w3-hover-shadow w3-margin-bottom">
+        <img src="Los Angeles.jpg" alt="Los Angeles" style="width:100%">
+        <div class="w3-container">
+          <h3>Los Angeles</h3>
+          <p class="w3-opacity">Griffith Observatory</p>
+          <p>Dance with your lover at the Griffith Observatory at sunset.</p>
+          
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.0904496336416!2d-118.3029684244366!3d34.11843407313202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf61e9d408cb%3A0x73ff07b1c2d6dadc!2sGriffith%20Observatory!5e0!3m2!1sen!2shk!4v1743015416700!5m2!1sen!2shk"
+              width="100%" 
+              height="400"
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy"
+            ></iframe>
+          </div>
+            <div class="video-container">
+              <iframe 
+          width="100%" 
+          height="600" 
+          src="https://www.youtube.com/embed/iuBoItty_D4" 
+          title="YouTube Video" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+        ></iframe>
+        
+            </div>
+            <h4>Nearby Hotels</h4>
+            <ul class="hotel-list">
+              <li>Hollywood Roosevelt Hotel</li>
+              <li>Chateau Marmont</li>
+              <li>Hotel Figueroa</li>
+            </ul>
+          </div>
+          
+          <button class="w3-button w3-black w3-block">Buy Tickets</button>
+        </div>
+      </div>
+
+      <!-- Paris 卡片 -->
+      <div class="w3-card w3-white w3-hover-shadow w3-margin-bottom">
+        <img src="paris.jpg" alt="Paris" style="width:100%">
+        <div class="w3-container">
+          <h3>Paris</h3>
+          <p class="w3-opacity">Seine River</p>
+          <p> strolling through the rain-kissed streets of Paris at midnight</p>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2707762.05493946!2d-2.6181713879774025!3d48.48916051338277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47edb722f69c5dc7%3A0x4a812c1e7a4bad61!2sSeine!5e0!3m2!1sen!2shk!4v1743018529911!5m2!1sen!2shk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              width="100%" 
+              height="400"
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy"
+            ></iframe>
+          </div>
+            <div class="video-container">
+              <iframe 
+          width="100%" 
+          height="600" 
+          src="https://www.youtube.com/embed/vPKNkyKVAng?si=QUuzk5J3WznDUQgF" 
+          title="YouTube Video" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+        ></iframe>
+            <h4>Nearby Hotels</h4>
+            <ul class="hotel-list">
+              <li>Le Bristol Paris</li>
+              <li>Four Seasons Hotel George V</li>
+              <li>Hôtel Plaza Athénée</li>
+            </ul>
+          </div>
+          
+          <button class="w3-button w3-black w3-block">Buy Tickets</button>
+        </div>
+      </div>
+
+      <!-- Vienna 卡片 -->
+      <div class="w3-card w3-white w3-hover-shadow">
+        <img src="Vienna.jpg" alt="Vienna" style="width:100%">
+        <div class="w3-container">
+          <h3>Vienna</h3>
+          <p class="w3-opacity">Prater Park</p>
+          <p>Overlooking Vienna's romantic skyline </p>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.5405635082425!2d16.397598976302138!3d48.215464771252236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d073f4daba163%3A0xfce7699ce9a8b1f4!2sPrater!5e0!3m2!1sen!2shk!4v1743019078694!5m2!1sen!2shk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              width="100%" 
+              height="400"
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy"
+            ></iframe>
+          </div>
+            <div class="video-container">
+              <iframe 
+          width="100%" 
+          height="600" 
+          src="https://www.youtube.com/embed/jD_IleeZ4cM?si=bBSMWPVRAwJe0yW1" 
+          title="YouTube Video" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+        ></iframe>
+            <h4>Nearby Hotels</h4>
+            <ul class="hotel-list">
+              <li>Sacher Hotel</li>
+              <li>Hotel Imperial</li>
+              <li>Steigenberger Hotel Herrenhof</li>
+            </ul>
+          </div>
+          <button class="w3-button w3-black w3-block">Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
+
